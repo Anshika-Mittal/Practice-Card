@@ -25,6 +25,7 @@
     position: relative;
     transition: transform 1s;
     transform-style: preserve-3d;
+    min-width: 130px;
 }
 
 .box:hover{
@@ -53,15 +54,15 @@
     text-align: center;
     font-size: 1.3em;
     color: #414546;
+    font-weight: bold;
 }
 
 .back{
-    position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
   transform: rotateY(180deg);
-  align-items: center;
   overflow: hidden;
   backface-visibility: hidden;
 }
@@ -71,4 +72,20 @@
     font-size: 1.4em;
     margin-top: 20px;
     font-family: serif;
+}
+
+.back img{
+    height: 100%;
+    width: 100%;
+    margin-top: 50px;
+}
+
+@media (max-width:180px) {
+    .back{
+        margin-top: 80px;
+    }
+    .back h3{
+        
+        padding-left: 20px;
+    }
 }
